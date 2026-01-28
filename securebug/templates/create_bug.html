@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Bug | SecureBug</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Create Bug</h1>
+
+        <p class="subtitle">
+            Report a new bug. Status and assignment are handled automatically by the system.
+        </p>
+
+        <form action="/create_bug" method="POST">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="severity">Severity</label>
+            <select id="severity" name="severity">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+                <option value="critical">critical</option>
+            </select>
+
+            <label for="reporter_id">Reporter ID</label>
+            <input type="number" id="reporter_id" name="reporter_id" required min="1">
+
+            <button type="submit">Create Bug</button>
+        </form>
+
+        <div class="back">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

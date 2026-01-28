@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureBug</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>SecureBug</h1>
+
+        <p class="subtitle">
+            A security-first bug tracking system focused on backend correctness,
+            controlled workflows, and auditability.
+        </p>
+
+        <div class="section">
+            <h3>About the Project</h3>
+            <p>
+                SecureBug demonstrates how real-world backend systems enforce
+                role-based access control, prevent invalid state transitions,
+                and maintain accountability through audit logs.
+            </p>
+        </div>
+
+        <div class="section actions">
+            <h3>Actions</h3>
+
+            <a href="/create_bug">Create a Bug</a>
+            <a href="/assign_bug">Assign a Bug</a>
+            <a href="/status">Change Bug Status</a>
+        </div>
+    </div>
+</body>
+</html>

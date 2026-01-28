@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assign Bug | SecureBug</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Assign Bug</h1>
+
+        <p class="subtitle">
+            Assign an open bug to a developer. Only authorized roles can perform this action.
+        </p>
+
+        <form action="/assign_bug" method="POST">
+            <label for="bug_id">Bug ID</label>
+            <input type="number" id="bug_id" name="bug_id" required min="1">
+
+            <label for="assignee_id">Developer ID (Assignee)</label>
+            <input type="number" id="assignee_id" name="assignee_id" required min="1">
+
+            <label for="actor_id">Your User ID</label>
+            <input type="number" id="actor_id" name="actor_id" required min="1">
+
+            <button type="submit">Assign Bug</button>
+        </form>
+
+        <div class="back">
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
